@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+using namespace std;//Author : rohit sahu
 int main()
 { int m,n,d,count,sum;
 
