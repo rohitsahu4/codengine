@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//input test cases
+	int test = 0;
+	cin>>test;
+
+	int size = 0;
+	int no = 0;
+	int k = 0;
+	int count = 0;
+	
+	//loop for each test case
+	for(int i = 0; i < test; i++){
+	    
+	    //input size of array
+	    cin>>size;
+	    
+	    //input number
+	    cin>>no;
+	    int A[size];
+	    int Avg[size];
+	    
+	    //input of array elements & calculating average
+	    for(int j = 0; j < size; j++){
+	        cin>>A[j];
+	        Avg[j] = (A[j]+no)/2;
+	    }
+	    
+	    //loop to count repeatence
+	    for(int k = 0; k < size; k++){
+	        count = 0;
+	        for(int j = 0; j < size; j++){
+	            if(A[j]==Avg[k]){
+	            count++;  
+	            }
+	        }
+	        Avg[k] = count;
+	        cout<<Avg[k]<<" ";
+	    }
+	    cout<<endl;
+	    
+	}
+	
+	return 0;
+}
