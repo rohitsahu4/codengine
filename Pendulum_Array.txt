@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int test = 0;
+	cin>>test;
+	
+	for(int i = 0; i < test; i++){
+	    int n = 0;
+	    cin>>n;
+	    int A[n];
+	    for(int j = 0; j < n; j++){
+	        cin>>A[j];
+	    }
+	    for(int j = 0; j < n; j++){
+	        for(int k = 0; k < (n-1); k++){
+	            if(A[k]>A[k+1]){
+	                int temp = A[k+1];
+	                A[k+1] = A[k];
+	                A[k] = temp;
+	            }
+	        }
+	    }
+	    if(n%2 != 0){
+	        for(int j = (n-1); j > -1; j-=2){
+	            cout<<A[j]<<" ";
+	        }
+	        for(int j = 1; j < n; j+=2){
+	            cout<<A[j]<<" ";
+	        }
+	        cout<<endl;
+	    }
+	    else{
+	        for(int j = (n-2); j > -1; j-=2){
+	            cout<<A[j]<<" ";
+	        }
+	        for(int j = 1; j < n; j+=2){
+	            cout<<A[j]<<" ";
+	        }
+	        cout<<endl;
+	    }
+	}
+	
+	return 0;
+}
