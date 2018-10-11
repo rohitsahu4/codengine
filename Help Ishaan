@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int test = 0; 
+	cin>>test;
+	
+	for(int i = 0; i < test; i++){
+	    int inp = 0;
+	    cin>>inp;
+	    if(inp == 1){
+	        cout<<"1"<<endl;
+	    }
+	    else {
+	        int p1 = 0;
+	    int p2 = 0;
+	    
+	    int flg1 = 0;
+	    
+	    for(int is = inp; is > 0; is--){
+	        for(int j = 2; j <= (is/2); j++){
+	            if(is%j == 0){
+	                flg1 = 1;
+	                break;
+	            }
+	        }
+	        if(flg1 == 1){
+	            flg1 = 0;
+	        }
+	        else{
+	            p1 = is;
+	            break;
+	        }
+	    }
+	    flg1 = 0;
+	    p2 = inp;
+	    while(true){
+	        for(int j = 2; j <= (p2/2); j++){
+	            if(p2%j == 0){
+	                flg1 = 1;
+	                break;
+	            }
+	        }
+	        if(flg1 == 1){
+	            flg1 = 0;
+	            p2++;
+	        }
+	        else{
+	            break;
+	        }
+	    }
+	    
+	    if((inp-p1) > (p2-inp)){
+	        cout<<(p2-inp)<<endl;
+	    }
+	    else{
+	        cout<<(inp-p1)<<endl;
+	    }
+	    }
+	    
+	}
+	return 0;
+}
